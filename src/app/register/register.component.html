@@ -1,3 +1,13 @@
+<h1>Register</h1>
+
+<p> Here you can register a new account for the site so you can add favorites, leave comments and much more.
+    <br>
+    <br>
+</p>
+
+
+
+
 <form (ngSubmit)="onSubmit()">
     <label>Name:</label>
     <input [(ngModel)]="name" name="name" type="text" required>
@@ -13,6 +23,9 @@
 
     <label>Password:</label>
     <input [(ngModel)]="password" name="password"  type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+
+<!--     <label for="terms"> I agree to the terms and conditions</label>
+    <input type="checkbox" id="terms" name="terms" required> -->
 
     <p>Already have an account? <a routerLink="/login">Login</a></p>
     <button type="submit">Submit</button>
