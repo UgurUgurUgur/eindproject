@@ -9,23 +9,28 @@
 
 
 <form (ngSubmit)="onSubmit()">
-    <label>Name:</label>
-    <input [(ngModel)]="name" name="name" type="text" required>
+    <label for="name">Name:</label>
+    <input id="name" [(ngModel)]="name" name="name" type="text" required>
 
-    <label>Surname:</label>
-    <input [(ngModel)]="surname" name="surname" type="text" required>
+    <label for="surname">Surname:</label>
+    <input id="surname" [(ngModel)]="surname" name="surname" type="text" required>
 
-    <label>Username:</label>
-    <input [(ngModel)]="username" name="username" type="text" required>
+    <label for="username">Username:</label>
+    <input id="username" [(ngModel)]="username" name="username" type="text" required>
 
-    <label>Email:</label>
-    <input [(ngModel)]="email" name="email" type="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="email" name="email" type="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
 
-    <label>Password:</label>
-    <input [(ngModel)]="password" name="password"  type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+    <label for="password">Password:</label>
+    <input id="password" [(ngModel)]="password" name="password"  type="password" required>
 
-<!--     <label for="terms"> I agree to the terms and conditions</label>
-    <input type="checkbox" id="terms" name="terms" required> -->
+    <label for="confirmPassword">Confirm Password:</label>
+    <input id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" type="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$">
+
+    <label for="terms"> I agree to the terms and conditions</label>
+    <input type="checkbox" id="terms" name="terms" required false>
+
+    <p class="error" id="error"></p>
 
     <p>Already have an account? <a routerLink="/login">Login</a></p>
     <button type="submit">Submit</button>
