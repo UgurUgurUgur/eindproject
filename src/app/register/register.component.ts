@@ -16,8 +16,11 @@ export class RegisterComponent {
   email: any;
   confirmPassword: any;
   terms: any;
+  showPassword = false; /* made it false by default so it is not shown by default */
 
-
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword; /* went from true to false */
+  }
 
 
   onSubmit() {
