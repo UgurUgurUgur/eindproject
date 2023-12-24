@@ -1,1 +1,16 @@
-<p>test</p>
+<form (ngSubmit)="onSubmit()">
+    <label for="username">Username:</label>
+    <input id="username" [(ngModel)]="username" name="username" type="text" required>
+
+    <label for="password">Password:</label>
+    <input [(ngModel)]="password" [type]="showPassword ? 'text' : 'password'" id="password" name="password">
+    <span (click)="togglePasswordVisibility()" class="password-toggle">
+        <i class="fa fa-eye"></i>
+    </span>
+    <br>
+
+    <p class="error" id="error"></p>
+
+    <p>No account? <a routerLink="/register">register</a></p>
+    <button type="submit">Login</button>
+</form>

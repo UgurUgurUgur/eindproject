@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
 
 <h1>Register</h1>
@@ -22,7 +22,7 @@
     <input id="username" [(ngModel)]="username" name="username" type="text" required>
 
     <label for="email">Email:</label>
-    <input id="email" [(ngModel)]="email" name="email" type="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    <input id="email" [(ngModel)]="email" name="email" type="email" required >
 
     <label for="password">Password:</label>
     <input [(ngModel)]="password" [type]="showPassword ? 'text' : 'password'" id="password" name="password">
@@ -31,7 +31,7 @@
     </span>
     <br>
     <label for="confirmPassword">Confirm Password:</label>
-    <input id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" type="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$">
+    <input id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" type="password" required>
 
     <label for="terms"> I agree to the terms and conditions</label>
     <input type="checkbox" id="terms" name="terms" required false>
