@@ -29,7 +29,10 @@ export class LoginComponent {
 
 
   onSubmit() {
-    if (!this.username || !this.password) { /* if any of the fields are empty show an alert */
+    if (this.username == "admin" && this.password == "admin") { /* the login for admin. The password is just a prototype */ 
+      console.log("admin works!");
+    }
+    else if (!this.username || !this.password) { /* if any of the fields are empty show an alert */
       alert("Please fill out all fields");
       return;
     }
@@ -41,7 +44,6 @@ export class LoginComponent {
 
   //TODO: check if password is correct with own database and api
   //TODO: check if username is correct with own database and api
-  //TODO: Make an admin login
   //TODO: Make a forgot password
   //TODO: Make a route to the register
   
