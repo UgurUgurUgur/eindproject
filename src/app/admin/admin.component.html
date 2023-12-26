@@ -1,1 +1,19 @@
-<p>admin works!</p>
+
+<div id="Newpost">
+    <h1>New post</h1>
+    <div id="title">
+        <label for="title">Title:</label>
+        <input id="title" [(ngModel)]="title">
+    </div>
+    <div id="image">
+        <label for="image">Image:</label>
+        <input id="image" [(ngModel)]="image"> <!-- upload image here, need to change it here -->
+    </div>
+    <div id="description">
+        <label for="description">Description:</label>
+        <input id="description" [(ngModel)]="description">
+    </div>
+    <div>
+        <button (click)="newPost()">New Post</button>
+    </div>
+</div>
