@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
@@ -35,6 +36,8 @@ export class RegisterComponent {
       alert("Please accept the terms and conditions");
       return;
     }
+
+  
 
 
 
@@ -75,8 +78,8 @@ export class RegisterComponent {
       this.terms = '';
     }
   }
-  // TODO: make the route for the login page
-  // TODO: when database is connected put this in the database instead of the console log
+  
+  // TODO : when database is connected put this in the database instead of the console log
 
 }
 

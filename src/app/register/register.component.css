@@ -57,3 +57,16 @@ a:hover {
     color: #ff9f9f;
     
 }
+
+routerlink.link {
+    text-align: center;
+    color: #df6b6b;
+}
+
+routerlink.link:hover {
+    color: black;
+    text-decoration: underline;
+    font-size: 1.2rem;
+    transition: 0.2s;
+    cursor: grab;
+}
