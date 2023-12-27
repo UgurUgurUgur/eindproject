@@ -59,6 +59,8 @@ export class RegisterComponent {
       return;
     }
 
+    /* TODO : check if email is already in the database and if the username is already in the database */
+
 
     else {
       console.log("name: " + this.name);
