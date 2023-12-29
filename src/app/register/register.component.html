@@ -36,6 +36,9 @@
     <label for="terms"> I agree to the terms and conditions</label>
     <input type="checkbox" id="terms" name="terms" required false>
 
+    <label for="news"> I would like to receive news</label>
+    <input type="checkbox" id="News" name="News" [(ngModel)]="news">
+
     <p class="error" id="error"></p>
 
     <p>Already have an account? <routerLink class="link" [routerLink]="['/login']">Login</routerLink></p> <!-- we go via the route to the login page -->

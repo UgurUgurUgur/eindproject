@@ -16,12 +16,25 @@ export class RegisterComponent {
   password: any;
   email: any;
   confirmPassword: any;
-  terms: any;
+  terms: boolean = false;
+  news: boolean = false;
   showPassword = false; /* made it false by default so it is not shown by default */
 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword; /* went from true to false */
   }
+
+  toggleNews() {
+    this.news = !this.news;
+    console.log(this.news);
+  }
+
+  toggleTerms() {
+    this.terms = !this.terms;
+    console.log(this.terms);
+  }
+
+  
 
 
   onSubmit() {
@@ -35,11 +48,7 @@ export class RegisterComponent {
     if (!termsaccepted.checked) {                                           /* if the checkbox is not checked show an alert */
       alert("Please accept the terms and conditions");
       return;
-    }
-
-  
-
-
+    } 
 
     const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;        /* email must match this pattern */
     if (!emailPattern.test(this.email)) {                                   /* if the email does not match the pattern show an alert */
@@ -58,6 +67,8 @@ export class RegisterComponent {
       document.getElementById("error")!.innerText = ("Passwords do not match");
       return;
     }
+    
+
 
     /* TODO : check if email is already in the database and if the username is already in the database */
 
@@ -68,6 +79,9 @@ export class RegisterComponent {
       console.log("username: " + this.username);
       console.log("email: " + this.email);
       console.log("password: " + this.password);
+      console.log("news: " + this.news);
+      
+
 
 
       // Reset the form after submission so it doesnt get submitted again
@@ -77,7 +91,8 @@ export class RegisterComponent {
       this.password = ''; // here we clear the password from the page, but do not remove it
       this.email = '';
       this.confirmPassword = '';
-      this.terms = '';
+      this.terms = false;
+      this.news = false;
     }
   }
   
