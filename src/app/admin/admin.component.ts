@@ -1,28 +1,41 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-admin',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, ReactiveFormsModule,  HttpClient],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })
+
+/* export class ImageUploadComponent {
+  selectedFile: File | null = null;
+  imageUrl: string | ArrayBuffer | null = '';
+  onFileSelected(event: any): void {
+    this.selectedFile = (event.target as HTMLInputElement).files[0]; need to fix this error
+   }
+} */            
+
+
 export class AdminComponent {
 
   title = '';
-  image = '';
   description = '';
+
+
+
+
 
 
   newPost() {                                       /* this function is called when the new post button is pressed  */
     console.log("title: " + this.title);
-    console.log( "image: " + this.image);
-    console.log( "description: " + this.description);
+    console.log("description: " + this.description);
 
     this.title = '';
-    this.image = '';     
     this.description = '';
+
   }
 
 
