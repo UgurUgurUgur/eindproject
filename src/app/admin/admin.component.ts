@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+/* import { HttpClient } from '@angular/common/http'; */
 
 @Component({
   selector: 'app-admin',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule,  HttpClient],
+  imports: [FormsModule, ReactiveFormsModule, /*  HttpClient */],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })
