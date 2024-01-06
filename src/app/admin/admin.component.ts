@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-/* import { HttpClient } from '@angular/common/http'; */
+
 
 @Component({
   selector: 'app-admin',
@@ -20,23 +20,5 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 export class AdminComponent {
-
-  title = '';
-  description = '';
-
-
-
-
-
-
-  newPost() {                                       /* this function is called when the new post button is pressed  */
-    console.log("title: " + this.title);
-    console.log("description: " + this.description);
-
-    this.title = '';
-    this.description = '';
-
-  }
-
 
 }
