@@ -46,6 +46,7 @@ export class AdminComponent {
 
   uploadImage(base64String: string) {
     // Implementation to send the base64 string to your API.
+    console.log(base64String);
   }
 
 }
