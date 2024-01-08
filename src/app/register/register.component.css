@@ -76,3 +76,16 @@ routerlink.link:hover {
     transition: 0.2s;
     cursor: grab;
 }
+
+
+input:required {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:optional {
+    background-color: lightgray;
+}
