@@ -11,17 +11,10 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrl: './admin.component.css'
 })
 
-/* export class ImageUploadComponent {
-  selectedFile: File | null = null;
-  imageUrl: string | ArrayBuffer | null = '';
-  onFileSelected(event: any): void {
-    this.selectedFile = (event.target as HTMLInputElement).files[0]; need to fix this error
-   }
-} */
-
-
 export class AdminComponent {
 
+  title: any;
+  description: any;
   imagePath: any;
 
 
@@ -46,7 +39,33 @@ export class AdminComponent {
 
   uploadImage(base64String: string) {
     // Implementation to send the base64 string to your API.
-    console.log(base64String);
+    console.log("Base64 string: " + base64String);
+    this.sanitizeImage(base64String);                     /* shows the image in the browser */
+  }
+
+  newPost() {
+    if (!this.title && !this.description) {
+      alert("Please fill out the title and description");
+      return;
+    }
+    
+    else if (!this.title) {
+      alert("Please fill out the title");
+      return;
+    }
+    else if (!this.description) {
+      alert("Please fill out the description");
+      return;
+    }
+
+    // Implementation to send the new post to the API.
+    console.log(this.title);
+    console.log(this.description);
+    
+    
+
+    this.title = "";
+    this.description = "";
   }
 
 }
