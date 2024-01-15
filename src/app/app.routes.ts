@@ -5,6 +5,8 @@ import { AdminComponent } from './admin/admin.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 
+import { ProfileComponent } from './userProfile/profile.component';
+
 export const routes: Routes = [
     {
         path: 'register',
@@ -25,6 +27,9 @@ export const routes: Routes = [
     {
         path: 'home',
         component: HomeComponent
+      
+        path: 'profile',
+        component: ProfileComponent
     }
     
 ];

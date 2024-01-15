@@ -59,6 +59,17 @@ export class RegisterComponent {
     }
 
 
+    const ageverify = new Date();
+    const age = ageverify.getFullYear() - new Date(this.birthdate).getFullYear();
+    if (age < 18) {                                                         /* if the age is less than 18 show an alert */
+      alert("You must be at least 18 years old");
+      return;
+    }
+    else if (age > 100) {                                                   /* if the age is greater than 100 show an alert */
+      alert("You must be less than 100 years old");
+      return ;
+    }
+
 
 
 
