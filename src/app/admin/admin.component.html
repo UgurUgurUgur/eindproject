@@ -1,13 +1,22 @@
-<!-- <div id="Newpost">
-    <h1>New post</h1>
+<div>
+    <h1>Admin Page</h1>
+</div>
+<div id="Newpost">
+
+    <h1>New Post</h1>
 
     <input type="text" [(ngModel)]="title" placeholder="Title">
     <textarea [(ngModel)]="description" placeholder="Description"></textarea>
-    <div>
-        <input type="file" (change)="onFileSelected($event)">
 
-        <img *ngIf="imageUrl" [src]="imageUrl">
-    </div>  
+    <input type="file" (change)="onFileSelected($event)" />
+    <img [src]="imagePath">
 
     <button (click)="newPost()">New Post</button>
-</div> -->
+
+</div>
+
+<!-- TODO: add a button to go back -->
+<!-- TODO: make it possible to remove comments -->
+<!-- TODO: make it possible to edit posts -->
+
+

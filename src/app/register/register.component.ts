@@ -1,3 +1,4 @@
+import { SlicePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -16,6 +17,7 @@ export class RegisterComponent {
   password: any;
   email: any;
   confirmPassword: any;
+  birthdate: any;
   terms: boolean = false; /* made it false by default because the laws say that you need to accept them yourself and not prechecked  */
   news: boolean = false;
   showPassword = false; /* made it false by default so it is not shown by default */
@@ -39,7 +41,7 @@ export class RegisterComponent {
 
   onSubmit() {
 
-    if (!this.name || !this.surname || !this.username || !this.password || !this.email) { /* if any of the fields are empty show an alert */
+    if (!this.name || !this.surname || !this.username || !this.password || !this.email || !this.confirmPassword || !this.birthdate) { /* if any of the fields are empty show an alert */
       alert("Please fill out all fields");
       return;
     }
@@ -55,6 +57,10 @@ export class RegisterComponent {
       alert("Please enter a valid email address");
       return;
     }
+
+
+
+
 
     /* Here we check if the password matches the pattern */
     const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;        /* password must be at least 8 characters, a number, and an uppercase letter */
@@ -78,8 +84,10 @@ export class RegisterComponent {
       console.log("surname:" + this.surname);
       console.log("username: " + this.username);
       console.log("email: " + this.email);
+      console.log("birthdate: " + this.birthdate); /* we dont use the birthdate in the database but we do in the console */
       console.log("password: " + this.password);
       console.log("news: " + this.news);
+
 
       localStorage.setItem("name", this.name);
       localStorage.setItem("surname", this.surname);
@@ -96,6 +104,7 @@ export class RegisterComponent {
       this.username = '';
       this.password = ''; // here we clear the password from the page, but do not remove it
       this.email = '';
+      this.birthdate = '';
       this.confirmPassword = '';
       this.terms = false;
       this.news = false;
